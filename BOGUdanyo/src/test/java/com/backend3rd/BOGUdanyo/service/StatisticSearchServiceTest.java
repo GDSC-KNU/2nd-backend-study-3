@@ -1,12 +1,9 @@
-package com.backend3rd.BOGUdanyo.Service;
+package com.backend3rd.BOGUdanyo.service;
 
 import com.backend3rd.BOGUdanyo.AppConfig;
-import com.backend3rd.BOGUdanyo.accidentArea.AccidentArea;
-import com.backend3rd.BOGUdanyo.accidentArea.MemoryStatisticRepository;
-import com.backend3rd.BOGUdanyo.accidentArea.StatisticRepository;
+import com.backend3rd.BOGUdanyo.entity.AccidentArea;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class StatisticSearchServiceTest {

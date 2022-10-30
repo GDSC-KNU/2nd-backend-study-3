@@ -1,7 +1,7 @@
-package com.backend3rd.BOGUdanyo.Service;
+package com.backend3rd.BOGUdanyo.service;
 
-import com.backend3rd.BOGUdanyo.accidentArea.AccidentArea;
-import com.backend3rd.BOGUdanyo.accidentArea.StatisticRepository;
+import com.backend3rd.BOGUdanyo.entity.AccidentArea;
+import com.backend3rd.BOGUdanyo.repository.StatisticRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

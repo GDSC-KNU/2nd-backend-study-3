@@ -1,4 +1,4 @@
-package com.backend3rd.BOGUdanyo.accidentArea;
+package com.backend3rd.BOGUdanyo.entity;
 
 import lombok.Getter;
 import lombok.ToString;

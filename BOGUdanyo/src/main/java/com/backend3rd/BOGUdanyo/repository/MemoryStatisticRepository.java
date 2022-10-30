@@ -1,11 +1,8 @@
-package com.backend3rd.BOGUdanyo.accidentArea;
+package com.backend3rd.BOGUdanyo.repository;
 
-import org.springframework.stereotype.Component;
+import com.backend3rd.BOGUdanyo.entity.AccidentArea;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 //@Component
 public class MemoryStatisticRepository implements StatisticRepository{
