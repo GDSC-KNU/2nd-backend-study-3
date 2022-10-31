@@ -1,6 +1,6 @@
 package com.backend3rd.BOGUdanyo.service;
 
-import com.backend3rd.BOGUdanyo.entity.AccidentArea;
+import com.backend3rd.BOGUdanyo.jpa.AccidentArea;
 import com.backend3rd.BOGUdanyo.repository.StatisticRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,8 +18,8 @@ public class StatisticSearchServiceImpl implements StatisticSearchService{
     }
 
     @Override
-    public void addData(String regionName, float lon, float lat, int occur_cnt, int caslt_cnt, int death_cnt, int sever_cnt, int mild_cnt) {
-        AccidentArea aa = new AccidentArea(regionName, lon, lat, occur_cnt, caslt_cnt, death_cnt, sever_cnt, mild_cnt);
+    public void addData(int id, String regionName, float lon, float lat, int occur_cnt, int caslt_cnt, int death_cnt, int sever_cnt, int mild_cnt) {
+        AccidentArea aa = new AccidentArea(id, regionName, lon, lat, occur_cnt, caslt_cnt, death_cnt, sever_cnt, mild_cnt);
         statisticRepository.store(aa);
     }
 

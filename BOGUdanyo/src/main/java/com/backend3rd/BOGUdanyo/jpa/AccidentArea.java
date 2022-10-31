@@ -1,12 +1,24 @@
-package com.backend3rd.BOGUdanyo.entity;
+package com.backend3rd.BOGUdanyo.jpa;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Getter // getter 생성
 @ToString
+@NoArgsConstructor
+@Entity
+@Table(name = "statistic")
 public class AccidentArea implements Comparable<AccidentArea>{
 
+        @Id
+        @GeneratedValue
+        private int id;
         private String address; // 위치 정보
         private float lon; // 경도
         private float lat; // 위도
@@ -16,7 +28,8 @@ public class AccidentArea implements Comparable<AccidentArea>{
         private int sever_cnt; // 중상자 수
         private int mild_cnt; // 경상자 수
 
-        public AccidentArea(String address, float lon, float lat, int occur_cnt, int caslt_cnt, int death_cnt, int sever_cnt, int mild_cnt) {
+        public AccidentArea(int id, String address, float lon, float lat, int occur_cnt, int caslt_cnt, int death_cnt, int sever_cnt, int mild_cnt) {
+                this.id = id;
                 this.address = address;
                 this.lon = lon;
                 this.lat = lat;

@@ -1,6 +1,6 @@
 package com.backend3rd.BOGUdanyo.repository;
 
-import com.backend3rd.BOGUdanyo.entity.AccidentArea;
+import com.backend3rd.BOGUdanyo.jpa.AccidentArea;
 
 import java.util.ArrayList;
 

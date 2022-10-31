@@ -1,6 +1,6 @@
 package com.backend3rd.BOGUdanyo.repository;
 
-import com.backend3rd.BOGUdanyo.entity.AccidentArea;
+import com.backend3rd.BOGUdanyo.jpa.AccidentArea;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
@@ -43,6 +43,7 @@ public class MySQLStatisticRepository implements StatisticRepository{
 
                 while (rs.next()) {
                     AccidentArea val = new AccidentArea(
+                            rs.getInt("id"),
                             rs.getString("address"),
                             rs.getFloat("lat"),
                             rs.getFloat("lon"),

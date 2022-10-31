@@ -1,7 +1,7 @@
 package com.backend3rd.BOGUdanyo.service;
 
 import com.backend3rd.BOGUdanyo.AppConfig;
-import com.backend3rd.BOGUdanyo.entity.AccidentArea;
+import com.backend3rd.BOGUdanyo.jpa.AccidentArea;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
