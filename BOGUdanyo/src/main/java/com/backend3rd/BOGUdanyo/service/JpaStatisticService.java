@@ -1,13 +1,16 @@
-package com.backend3rd.BOGUdanyo.jpa;
+package com.backend3rd.BOGUdanyo.service;
 
+import com.backend3rd.BOGUdanyo.entity.AccidentArea;
+import com.backend3rd.BOGUdanyo.repository.JpaStatisticRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
 
 @Service
+@PropertySource(value={"classpath:application.properties"})
 public class JpaStatisticService {
 
     @Autowired

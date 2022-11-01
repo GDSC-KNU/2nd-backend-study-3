@@ -1,11 +1,10 @@
 package com.backend3rd.BOGUdanyo.controller;
 
-import com.backend3rd.BOGUdanyo.jpa.AccidentArea;
-import com.backend3rd.BOGUdanyo.jpa.JpaStatisticService;
+import com.backend3rd.BOGUdanyo.entity.AccidentArea;
+import com.backend3rd.BOGUdanyo.service.JpaStatisticService;
 import org.json.simple.parser.ParseException;
 import com.backend3rd.BOGUdanyo.service.BogudanyoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,4 +1,4 @@
-package com.backend3rd.BOGUdanyo.jpa;
+package com.backend3rd.BOGUdanyo.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,5 +1,6 @@
-package com.backend3rd.BOGUdanyo.jpa;
+package com.backend3rd.BOGUdanyo.repository;
 
+import com.backend3rd.BOGUdanyo.entity.AccidentArea;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
