@@ -5,7 +5,7 @@ import com.backend3rd.BOGUdanyo.service.RouteAccidentService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.json.simple.parser.ParseException;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +17,7 @@ public class RouteAccidentController {
 
     RouteAccidentService accidentService;
 
-    @PutMapping("/api/route")
+    @GetMapping("/route")
     public routeAccidentResult getRouteAccident(@RequestParam("start") String start, @RequestParam("goal") String goal) throws ParseException {
         List<AccidentArea> findRouteAccident = accidentService.getRouteAccident(start, goal);
         List<RouteAccidentDto> collect = findRouteAccident.stream()
