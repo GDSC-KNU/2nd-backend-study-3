@@ -18,9 +18,9 @@ public class RouteAccidentServiceTest {
 
     @Test
     @DisplayName("routeAccident 서비스 테스트")
-    void jpaServiceTest() throws ParseException {
+    void RouteAccidentServiceTest() throws ParseException {
         RouteAccidentService bean = ac.getBean(RouteAccidentService.class);
-        List<AccidentArea> rankedArea = bean.getRouteAccident("대구광역시 달서구 선원남로 181", "대구광역시 달서구 선원로 199");
+        List<AccidentArea> rankedArea = bean.getRouteAccident("대구광역시 달서구 선원남로 181", "대구광역시 북구 대학로 80");
         for (AccidentArea accidentArea : rankedArea) {
             System.out.println("accidentArea = " + accidentArea.getAddress() + " score = " + accidentArea.calScore());
         }
