@@ -4,6 +4,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,6 +15,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
+@Component
 public class KakaoRestApiHelper {
     public float [] getKakaoApiFromAddress(String roadFullAddr) throws ParseException {
         String apiKey = "ad9c454e765b14a6d580f2f902664f17";

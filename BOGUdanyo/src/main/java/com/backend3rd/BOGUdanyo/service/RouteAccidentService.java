@@ -13,9 +13,9 @@ import java.util.List;
 @PropertySource(value={"classpath:application.properties"})
 @RequiredArgsConstructor
 public class RouteAccidentService {
-    KakaoRestApiHelper kakaoRestApiHelper;
+    final KakaoRestApiHelper kakaoRestApiHelper;
 
-    RouteAccidentRepository accidentRouteRepository;
+    final RouteAccidentRepository accidentRouteRepository;
 
     public List<AccidentArea> getRouteAccident(String start, String goal) throws org.json.simple.parser.ParseException {
         float [] startC = kakaoRestApiHelper.getKakaoApiFromAddress(start);

@@ -26,13 +26,6 @@ public class RouteAccidentController {
 
         return new routeAccidentResult(collect);
     }
-    @Data
-    private class routeLocationRequest {
-        private float startX;
-        private float startY;
-        private float goalX;
-        private float goalY;
-    }
 
     @Data
     @AllArgsConstructor
