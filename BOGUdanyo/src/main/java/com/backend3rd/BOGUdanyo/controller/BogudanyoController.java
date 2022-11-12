@@ -24,7 +24,6 @@ public class BogudanyoController {
 
     @GetMapping("/myAccidentArea")
     public float[][] given_startgoal_returnXY(@RequestParam("start") String start, @RequestParam("goal") String goal) throws ParseException {
-
         float[][] myAccidentArea = bogudanyoService.findMyAccidentArea(start, goal);
         return myAccidentArea;
     }
@@ -36,4 +35,5 @@ public class BogudanyoController {
         List<AccidentArea> rankedArea = jpaStatisticService.getRankedArea(region);
         return rankedArea;
     }
+
 }
