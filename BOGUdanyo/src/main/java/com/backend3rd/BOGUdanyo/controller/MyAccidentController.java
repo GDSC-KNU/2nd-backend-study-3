@@ -5,6 +5,7 @@ import com.backend3rd.BOGUdanyo.service.MyAccidentService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.json.simple.parser.ParseException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,24 +16,19 @@ import java.util.stream.Collectors;
 @RestController
 public class MyAccidentController {
 
+    @Autowired
     MyAccidentService myAccidentService;
 
     @GetMapping("/myAccidents")
-    public myAccidentsResult getmyAccidents(@RequestParam("start") String start) throws ParseException {
+    public List<MyAccidentDto> getmyAccidents(@RequestParam("start") String start) throws ParseException {
         List<AccidentArea> findmyAccidents = myAccidentService.getMyAccident(start);
         List<MyAccidentDto> collect = findmyAccidents.stream()
                 .map(m -> new MyAccidentDto(m.getId(), m.getAddress(), m.getLat(), m.getLon()))
                 .collect(Collectors.toList());
 
-        return new myAccidentsResult(collect);
+        return collect;
     }
 
-
-    @Data
-    @AllArgsConstructor
-    static class myAccidentsResult<T> {
-        private T data;
-    }
 
     @Data
     @AllArgsConstructor
