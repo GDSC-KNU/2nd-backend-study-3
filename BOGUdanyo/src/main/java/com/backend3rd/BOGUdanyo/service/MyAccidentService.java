@@ -20,10 +20,10 @@ public class MyAccidentService {
 
     public List<AccidentArea> getMyAccident(String start) throws ParseException {
         float [] startC = kakaoRestApiHelper.getKakaoApiFromAddress(start);
-        float startLon = startC[0];
-        float startLat = startC[1];
+        float startLat = startC[0];
+        float startLon = startC[1];
 
-        List<AccidentArea> result = myAccidentRepository.findByRegion(startLon, startLat);
+        List<AccidentArea> result = myAccidentRepository.findByRegion(startLat, startLon);
 
         return result;
     }
