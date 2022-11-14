@@ -18,13 +18,9 @@ public class MyAccidentService {
     final KakaoRestApiHelper kakaoRestApiHelper;
     final MyAccidentRepository myAccidentRepository;
 
-    public List<AccidentArea> getMyAccident(String start) throws ParseException {
-        float [] startC = kakaoRestApiHelper.getKakaoApiFromAddress(start);
-        float startLat = startC[0];
-        float startLon = startC[1];
+    public List<AccidentArea> getMyAccident(float startLat, float startLon) throws ParseException {
 
         List<AccidentArea> result = myAccidentRepository.findByRegion(startLat, startLon);
-
         return result;
     }
 

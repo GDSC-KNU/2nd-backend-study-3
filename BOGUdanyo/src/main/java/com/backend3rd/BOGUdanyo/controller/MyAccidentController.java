@@ -20,8 +20,8 @@ public class MyAccidentController {
     MyAccidentService myAccidentService;
 
     @GetMapping("/myAccidents")
-    public List<MyAccidentDto> getmyAccidents(@RequestParam("start") String start) throws ParseException {
-        List<AccidentArea> findmyAccidents = myAccidentService.getMyAccident(start);
+    public List<MyAccidentDto> getmyAccidents(@RequestParam("startLat") float startLat, @RequestParam("startLon") float startLon) throws ParseException {
+        List<AccidentArea> findmyAccidents = myAccidentService.getMyAccident(startLat, startLon);
         List<MyAccidentDto> collect = findmyAccidents.stream()
                 .map(m -> new MyAccidentDto(m.getId(), m.getAddress(), m.getLat(), m.getLon()))
                 .collect(Collectors.toList());
