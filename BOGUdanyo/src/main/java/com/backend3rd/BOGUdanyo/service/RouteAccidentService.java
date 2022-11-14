@@ -22,8 +22,8 @@ public class RouteAccidentService {
         float [] startC = kakaoRestApiHelper.getKakaoApiFromAddress(start);
         float [] goalC = kakaoRestApiHelper.getKakaoApiFromAddress(goal);
 
-        float middleLat = (startC[0] + goalC[0])/2;
-        float middleLon = (startC[1] + goalC[1])/2;
+        float middleLat = (startC[1] + goalC[1])/2;
+        float middleLon = (startC[0] + goalC[0])/2;
 
         double radius = distance(middleLat, middleLon, startC[1], startC[0]);
 
